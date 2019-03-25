@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href="#") Navbar
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon  
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item(class=(title === 'Home' ? 'active' : ''))
+              a.nav-link(href="/") Home 
+                span.sr-only (current)
+            li.nav-item(class=(title === 'about' ? 'active' : ''))
+              a.nav-link(href="/about") About US
+            li.nav-item(class=(title === 'contact' ? 'active' : ''))
+              a.nav-link(href="/contact") Contact
+    block content
+    footer
+      p &copy; 2018 Footer Here
